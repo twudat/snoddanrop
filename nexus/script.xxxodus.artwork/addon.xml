@@ -2,13 +2,13 @@
 <addon id="script.xxxodus.artwork"
 			 name="XXX-O-DUS ArtWork"
 			 version="5.00.000"
-	     provider-name="Originally By : Echo Coder :: Revived By @Nemzzy668 :: Hacked by TrickBit">
+	     provider-name="Originally By : Echo Coder :: Revived By @Nemzzy668 :: Hacked by @Twudat">
 
 	<requires>
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
-		<summary>Artwork for XXXODUS</summary>
+		<summary>Artwork for XXX-O-DUS</summary>
 		<description>Artwork for XXX-O-DUS is maintained separately to make distribution of the the addon itself easier/faster.
 		</description>
 		<platform>all</platform>

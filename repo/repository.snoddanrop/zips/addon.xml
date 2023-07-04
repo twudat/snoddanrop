@@ -9,15 +9,15 @@
 			<datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
 		</dir>
 		<dir>
-			<info compressed="false">https://https://raw.githubusercontent.com/TrickBit/idok-snoddanrop/master/repo/repository.snoddanrop/addon.xml</info>
-			<checksum>http://raw.githubusercontent.com/TrickBit/idok-snoddanrop/master/repo/zips/addons.xml.md5</checksum>
-			<datadir zip="true">http://aw.githubusercontent.com/TrickBit/idok-snoddanrop/master/repo/repository.snoddanrop/zips/</datadir>
+			<info compressed="false">https://raw.githubusercontent.com/twudat/snoddanrop-idok/main/repo/repository.snoddanrop/zips/addon.xml</info>
+			<checksum>https://raw.githubusercontent.com/twudat/snoddanrop-idok/main/repo/repository.snoddanrop/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/twudat/snoddanrop-idok/main/repo/repository.snoddanrop/zips/</datadir>
 		</dir>
 
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>Snoddenrop</summary>
-		<description>Repo For Snoddenrop, Bought to you by @TrickBit</description>
+		<description>Repo For Snoddenrop, Bought to you by @Twudat</description>
 		<disclaimer>Educational use only, not for public release.</disclaimer>
 		<platform>all</platform>
 		<assets>

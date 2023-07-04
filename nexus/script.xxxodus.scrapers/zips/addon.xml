@@ -2,7 +2,7 @@
 <addon id="script.xxxodus.scrapers"
 			 name="XXX-O-DUS Scrapers"
 			 version="5.00.011"
-			 provider-name="Original Echo Coder // Maintained NOW by @Nemzzy668 // Hacked by TrickBit">
+			 provider-name="Original Echo Coder // Maintained NOW by @Nemzzy668 // Hacked by @Twudat">
 	<requires>
 		<import addon="script.module.requests" />
 		<import addon="script.module.beautifulsoup4" />
