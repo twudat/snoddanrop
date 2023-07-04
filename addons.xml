@@ -110,8 +110,8 @@
 			<datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
 		</dir>
 		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/twudat/snoddanrop/main/repo/repository.snoddanrop/zips/addon.xml</info>
-			<checksum>https://raw.githubusercontent.com/twudat/snoddanrop/main/repo/repository.snoddanrop/zips/addons.xml.md5</checksum>
+			<info compressed="false">https://raw.githubusercontent.com/twudat/snoddanrop/main/repo/repository.snoddanrop/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/twudat/snoddanrop/main/repo/repository.snoddanrop/addons.xml.md5</checksum>
 			<datadir zip="true">https://github.com/twudat/snoddanrop/raw/main/repo/repository.snoddanrop/zips/</datadir>
 		</dir>
 
