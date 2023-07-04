@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.xxxodus.scrapers"
+			 name="XXX-O-DUS Scrapers"
+			 version="5.00.011"
+			 provider-name="Original Echo Coder // Maintained NOW by @Nemzzy668 // Hacked by TrickBit">
+	<requires>
+		<import addon="script.module.requests" />
+		<import addon="script.module.beautifulsoup4" />
+		<import addon="script.module.html5lib" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Scrapers for use in XXX-O-DUS</summary>
+	</extension>
+</addon>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="repository.snoddanrop" name="snoddanrop - 18 / 19 Compatible Addons" version="01.0.001" provider-name="@TrickBit">
+	<extension point="xbmc.addon.repository" name="snoddanrop">
+		<dir>
+			<!-- <addon id="repository.resolveurl" name="ResolveURL Repository" provider-name="gujal" version="1.0.0"> /-->
+			<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+		</dir>
+		<dir>
+			<info compressed="false">https://https://raw.githubusercontent.com/TrickBit/idok-snoddanrop/master/repo/repository.snoddanrop/addon.xml</info>
+			<checksum>http://raw.githubusercontent.com/TrickBit/idok-snoddanrop/master/repo/zips/addons.xml.md5</checksum>
+			<datadir zip="true">http://aw.githubusercontent.com/TrickBit/idok-snoddanrop/master/repo/repository.snoddanrop/zips/</datadir>
+		</dir>
+
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Snoddenrop</summary>
+		<description>Repo For Snoddenrop, Bought to you by @TrickBit</description>
+		<disclaimer>Educational use only, not for public release.</disclaimer>
+		<platform>all</platform>
+		<assets>
+				<icon>icon.png</icon>
+				<fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+</addons>

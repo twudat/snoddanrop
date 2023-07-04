@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="plugin.video.cumination" name="CuminationTTT" provider-name="TrickBit" version="1.1.80">
+    <requires>
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.resolveurl" version="5.0.00" />
+        <import addon="script.module.resolveurl.xxx" version="2.0.1" />
+        <import addon="script.common.plugin.cache" />
+        <import addon="script.module.websocket" version="0.50.0" />
+        <import addon="script.module.inputstreamhelper" />
+        <import addon="script.module.requests" />
+    </requires>
+    <extension library="default.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <license>GPL 2.0</license>
+        <summary lang="en_GB">Cumination, the culmination of adult sites on Kodi</summary>
+        <description lang="en_GB">Cumination, the culmination of adult sites on Kodi</description>
+        <disclaimer lang="en_GB">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the sites offered. Click on About from the contextmenu on each site to check for contact details.</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.xxx-o-dus"
+			 name="XXX-O-DUS"
+			 version="5.00.012"
+	     provider-name="Originally By : Echo Coder :: Revived By @Nemzzy668 :: Hacked by TrickBit">
+  <requires>
+    <import addon="script.module.echo"/>
+    <import addon="script.xxxodus.artwork"/>
+    <import addon="script.xxxodus.scrapers"/>
+    <import addon="script.module.resolveurl"/>
+    <import addon="script.module.resolveurl.xxx"/>
+    <import addon="script.module.pyxbmct"/>
+	  <import addon="script.module.requests" />
+	  <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.html5lib" />
+		<import addon="script.module.six" />
+		<import addon="script.module.kodi-six" />
+	  </requires>
+	  <extension point="xbmc.python.pluginsource" library="default.py">
+	        <provides>video</provides>
+	  </extension>
+	  <extension point="xbmc.service" library="service.py" start="startup">
+	  </extension>
+	  <extension point="xbmc.addon.metadata">
+	    <platform>all</platform>
+	    <summary lang="en">[B]Addon Originally Created By EchoCoder, Now Maintained by @Nemzzy668 :: Massive Credit to @_PYDEV_ KingKong for the pyxbmct work to provide a stunning interface to view the dialogs in this addon and the GitHub issues! Also A huge credit to jokstergfx for the icons and fanarts in this addon and many others! Thank you![/B]</summary>
+	    <description lang="en">[COLOR white]XXX-O-DUS scrapes many websites to bring you hundreds of thousands of videos. Features of the addon include, history monitoring, favourites, downloadable videos, parental controls and more![/COLOR]
+
+			[COLOR white]Websites Include: Porn.com, PornHD.com, Chaturbate.com, RedTube.com, Xhamster.com, YouPorn.com, PornFun.com, Motherless.com,Porn00.org, Spankbang.com, Virtualpornstars.com, Watchxxxfree.com, Perfectgirls.net, XNXX.com and many more.[/COLOR]</description>
+
+		  <disclaimer lang="en">The pages of this addon are designed for ADULTS only and may include pictures and materials that some viewers may find offensive. If you are under the age of 18, if such material offends you or if it is illegal to view such material in your community please exit the addon.</disclaimer>
+	    <language></language>
+	    <platform>all</platform>
+	    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+	    <website>https://github.com/Colossal1/plugin.video.xxx-o-dus</website>
+	    <forum>https://github.com/Colossal1/plugin.video.xxx-o-dus</forum>
+	    <assets>
+	        <icon>icon.png</icon>
+	        <fanart>fanart.png</fanart>
+	    </assets>
+	  </extension>
+</addon>
+
+<addon id="script.xxxodus.artwork"
+			 name="XXX-O-DUS ArtWork"
+			 version="5.00.000"
+	     provider-name="Originally By : Echo Coder :: Revived By @Nemzzy668 :: Hacked by TrickBit">
+
+	<requires>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Artwork for XXXODUS</summary>
+		<description>Artwork for XXX-O-DUS is maintained separately to make distribution of the the addon itself easier/faster.
+		</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.xxxodus.scrapers"
+			 name="XXX-O-DUS Scrapers"
+			 version="5.00.011"
+			 provider-name="Original Echo Coder // Maintained NOW by @Nemzzy668 // Hacked by TrickBit">
+	<requires>
+		<import addon="script.module.requests" />
+		<import addon="script.module.beautifulsoup4" />
+		<import addon="script.module.html5lib" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Scrapers for use in XXX-O-DUS</summary>
+	</extension>
+</addon>
+
+<addons>
+<addon id="repository.snoddanrop" name="snoddanrop - 18 / 19 Compatible Addons" version="01.0.001" provider-name="@TrickBit">
+	<extension point="xbmc.addon.repository" name="snoddanrop">
+		<dir>
+			<!-- <addon id="repository.resolveurl" name="ResolveURL Repository" provider-name="gujal" version="1.0.0"> /-->
+			<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+		</dir>
+		<dir>
+			<info compressed="false">https://https://raw.githubusercontent.com/TrickBit/idok-snoddanrop/master/repo/repository.snoddanrop/addon.xml</info>
+			<checksum>http://raw.githubusercontent.com/TrickBit/idok-snoddanrop/master/repo/zips/addons.xml.md5</checksum>
+			<datadir zip="true">http://aw.githubusercontent.com/TrickBit/idok-snoddanrop/master/repo/repository.snoddanrop/zips/</datadir>
+		</dir>
+
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Snoddenrop</summary>
+		<description>Repo For Snoddenrop, Bought to you by @TrickBit</description>
+		<disclaimer>Educational use only, not for public release.</disclaimer>
+		<platform>all</platform>
+		<assets>
+				<icon>icon.png</icon>
+				<fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+</addons>
+</addons>

