@@ -194,6 +194,11 @@ if ( __name__ == "__main__" ):
     #rezip files an move
     print ('Removing all pyo and pyc files from addons...')
     cwd=os.getcwd()
+    zipsfolder = os.path.join(cwd,'zips')
+    if not os.path.exists(zipsfolder):
+        os.mkdir(zipsfolder)
+        print ('Directory doesn\'t exist, creating: ' + zipsfolder)
+
     #remove all pyo file from addons.
     for root, dirs, files in os.walk(cwd):
         # rem_folder = ['_MACOSX','zips']
@@ -213,17 +218,14 @@ if ( __name__ == "__main__" ):
                     print ('Removing: ' + os.path.join(root, d))
                 else: continue
             except: pass
+
     print ('Starting zip file creation...')
     filesinrootdir = os.listdir(cwd)
     for foldertozip in gen.get_addons():
-        version="-unknown"
+        version="unknown"
         print('folder to zip =' , foldertozip)
         zipfilenamefirstpart,zipfilenamelastpart = os.path.split(foldertozip)
 
-        zipsfolder = os.path.join(foldertozip,'zips')
-        if not os.path.exists(zipsfolder):
-            os.mkdir(zipsfolder)
-            print ('Directory doesn\'t exist, creating: ' + zipsfolder)
 
         #check if and move changelog, fanart and icon to zipdir
         filesinfoldertozip = os.listdir(foldertozip)
@@ -232,10 +234,10 @@ if ( __name__ == "__main__" ):
 
             sourcefile=os.path.join(foldertozip,filetozip)
             print ('processing file: ' + sourcefile)
-            if re.search("addon.xml", filetozip) : #copy both "addon.xml" and "addon.xml.md5" files to the zip folder
-                newname=os.path.join(zipsfolder,filetozip)
-                shutil.copyfile(sourcefile,newname)
-                print (' --> ' + newname)
+            # if re.search("addon.xml", filetozip) : #copy both "addon.xml" and "addon.xml.md5" files to the zip folder
+            #     newname=os.path.join(zipsfolder,filetozip)
+            #     shutil.copyfile(sourcefile,newname)
+            #     print (' --> ' + newname)
 
             if re.search("addon.xml", filetozip) and not re.search("addon.xml.md5", filetozip) : # get version number of plugin
                 try:
@@ -249,21 +251,21 @@ if ( __name__ == "__main__" ):
                 root = tree.getroot()
                 for elem in root.iter('addon'):
                     # print (elem.tag + ': ' + elem.attrib['version'])
-                    version = '-'+elem.attrib['version']
+                    version = elem.attrib['version']
                 continue
-            if re.search("changelog", filetozip):
-                firstpart = filetozip[:-4]
-                lastpart = filetozip[len(filetozip)-4:]
-                newname=os.path.join(zipsfolder,firstpart+version+lastpart)
-                shutil.copyfile(sourcefile,newname)
-                # print ('Copying \n\t\t' + sourcefile + '\nto\n\t\t' + newname)
-                print (' --> ' + newname)
+            # if re.search("changelog", filetozip):
+            #     firstpart = filetozip[:-4]
+            #     lastpart = filetozip[len(filetozip)-4:]
+            #     newname=os.path.join(zipsfolder,firstpart+version+lastpart)
+            #     shutil.copyfile(sourcefile,newname)
+            #     # print ('Copying \n\t\t' + sourcefile + '\nto\n\t\t' + newname)
+            #     print (' --> ' + newname)
 
-            if re.search("icon|fanart", filetozip):
-                newname=os.path.join(zipsfolder,filetozip)
-                shutil.copyfile(sourcefile,newname)
-                # print ('Copying ' + sourcefile + ' to ' + newname)
-                print (' --> ' + newname)
+            # if re.search("icon|fanart", filetozip):
+            #     newname=os.path.join(zipsfolder,filetozip)
+            #     shutil.copyfile(sourcefile,newname)
+            #     # print ('Copying ' + sourcefile + ' to ' + newname)
+            #     print (' --> ' + newname)
 
             zipfilename = os.path.join(zipsfolder,zipfilenamelastpart + "-" + version + '.zip')
 

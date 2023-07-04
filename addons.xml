@@ -101,7 +101,7 @@
 	</extension>
 </addon>
 
-<addon id="repository.snoddanrop" name="snoddanrop - 18 / 19 Compatible Addons" version="01.0.001" provider-name="@TrickBit">
+<addon id="repository.snoddanrop" name="Snoddanrop Addons" version="01.0.001" provider-name="@Twudat">
 	<extension point="xbmc.addon.repository" name="snoddanrop">
 		<dir>
 			<!-- <addon id="repository.resolveurl" name="ResolveURL Repository" provider-name="gujal" version="1.0.0"> /-->
@@ -112,7 +112,7 @@
 		<dir>
 			<info compressed="false">https://raw.githubusercontent.com/twudat/snoddanrop/main/repo/repository.snoddanrop/zips/addon.xml</info>
 			<checksum>https://raw.githubusercontent.com/twudat/snoddanrop/main/repo/repository.snoddanrop/zips/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/twudat/snoddanrop/main/repo/repository.snoddanrop/zips/</datadir>
+			<datadir zip="true">https://github.com/twudat/snoddanrop/raw/main/repo/repository.snoddanrop/zips/</datadir>
 		</dir>
 
 	</extension>
