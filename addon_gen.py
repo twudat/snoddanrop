@@ -197,7 +197,7 @@ if ( __name__ == "__main__" ):
     zipsfolder = os.path.join(cwd,'zips')
     if not os.path.exists(zipsfolder):
         os.mkdir(zipsfolder)
-        print ('Directory doesn\'t exist, creating: ' + zipsfolder)
+        # print ('Directory doesn\'t exist, creating: ' + zipsfolder)
 
     #remove all pyo file from addons.
     for root, dirs, files in os.walk(cwd):
@@ -225,6 +225,8 @@ if ( __name__ == "__main__" ):
         version="unknown"
         print('folder to zip =' , foldertozip)
         zipfilenamefirstpart,zipfilenamelastpart = os.path.split(foldertozip)
+        addon_path=os.path.basename(foldertozip.strip())
+        ziptarget=os.path.join(zipsfolder,addon_path)
 
 
         #check if and move changelog, fanart and icon to zipdir
@@ -234,10 +236,6 @@ if ( __name__ == "__main__" ):
 
             sourcefile=os.path.join(foldertozip,filetozip)
             print ('processing file: ' + sourcefile)
-            # if re.search("addon.xml", filetozip) : #copy both "addon.xml" and "addon.xml.md5" files to the zip folder
-            #     newname=os.path.join(zipsfolder,filetozip)
-            #     shutil.copyfile(sourcefile,newname)
-            #     print (' --> ' + newname)
 
             if re.search("addon.xml", filetozip) and not re.search("addon.xml.md5", filetozip) : # get version number of plugin
                 try:
@@ -253,21 +251,8 @@ if ( __name__ == "__main__" ):
                     # print (elem.tag + ': ' + elem.attrib['version'])
                     version = elem.attrib['version']
                 continue
-            # if re.search("changelog", filetozip):
-            #     firstpart = filetozip[:-4]
-            #     lastpart = filetozip[len(filetozip)-4:]
-            #     newname=os.path.join(zipsfolder,firstpart+version+lastpart)
-            #     shutil.copyfile(sourcefile,newname)
-            #     # print ('Copying \n\t\t' + sourcefile + '\nto\n\t\t' + newname)
-            #     print (' --> ' + newname)
 
-            # if re.search("icon|fanart", filetozip):
-            #     newname=os.path.join(zipsfolder,filetozip)
-            #     shutil.copyfile(sourcefile,newname)
-            #     # print ('Copying ' + sourcefile + ' to ' + newname)
-            #     print (' --> ' + newname)
-
-            zipfilename = os.path.join(zipsfolder,zipfilenamelastpart + "-" + version + '.zip')
+            zipfilename = os.path.join(ziptarget,zipfilenamelastpart + "-" + version + '.zip')
 
 
         #  we want to recreate zips when version doesnt change but when the addon.xml changes
@@ -275,9 +260,15 @@ if ( __name__ == "__main__" ):
         if os.path.isfile(zipfilename):
             os.unlink(zipfilename)
 
+        # make sure the zip/addon-name/   structure exists
+        if not os.path.exists(ziptarget):
+            os.mkdir(ziptarget)
+
         if not os.path.isfile(zipfilename):  # only do it on new changes/versions
             print (' zipping file: ' + zipfilename)
             zipfolder(foldertozip, zipfilename , False ) #git hell if it re-zips the samething each time
+
+
             #this bit is for my repo structure - it wont work for yours
             if re.search("repository", foldertozip):
                 publicrepo=os.path.join(cwd,"..", "twudat.github.io",os.path.basename(zipfilename))
