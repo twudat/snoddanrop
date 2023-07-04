@@ -278,5 +278,11 @@ if ( __name__ == "__main__" ):
         if not os.path.isfile(zipfilename):  # only do it on new changes/versions
             print (' zipping file: ' + zipfilename)
             zipfolder(foldertozip, zipfilename , False ) #git hell if it re-zips the samething each time
+            #this bit is for my repo structure - it wont work for yours
+            if re.search("repository", foldertozip):
+                publicrepo=os.path.join(cwd,"..", "twudat.github.io",os.path.basename(zipfilename))
+                publicrepo=os.path.abspath(publicrepo)
+                # print (publicrepo)
+                shutil.copyfile(zipfilename,publicrepo)
         else:
             print (' skip zipping file: ' + zipfilename)
