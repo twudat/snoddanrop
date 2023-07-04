@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addons>
+<?xml version="1.0" encoding="UTF-8"?>
 <addon id="repository.snoddanrop" name="snoddanrop - 18 / 19 Compatible Addons" version="01.0.001" provider-name="@TrickBit">
 	<extension point="xbmc.addon.repository" name="snoddanrop">
 		<dir>
@@ -26,4 +25,3 @@
 		</assets>
 	</extension>
 </addon>
-</addons>
