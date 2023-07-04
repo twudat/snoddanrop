@@ -53,7 +53,7 @@ class Generator:
     def get_addons(self ):
         return self.addons
 
-    def print(self):
+    def dump(self):
         for i in self.addons:
             print(i)
 
@@ -156,18 +156,22 @@ class Generator:
 
 
 def zipfolder(source_dir, target_file , verbose=False):
-
     zipobj = zipfile.ZipFile(target_file, 'w', zipfile.ZIP_DEFLATED)
 
     folder = os.path.abspath(source_dir) # make sure folder is absolute
+
+    folder_base=os.path.basename(folder.strip(os.path.sep))
+
+    # print("folder base = %s" % folder_base)
 
     # Walk the entire folder tree and compress the files in each folder.
     for foldername, subfolders, filenames in os.walk(source_dir):
 
         if foldername == folder:
-             archive_folder_name = ''
+             archive_folder_name = folder_base  #''
         else:
              archive_folder_name = os.path.relpath(foldername, folder)
+             archive_folder_name=os.path.join(folder_base,archive_folder_name)
              # ignore fuse (ntfs) folder and .git folders
              if re.search(".fuse_hidden", filename): continue
              if not ".git" in foldername and not "zips" in foldername:
